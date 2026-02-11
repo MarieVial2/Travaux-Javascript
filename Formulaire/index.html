@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Formulaire</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Création de compte</h1>
+  </header>
+  <main>
+    <form action="https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-web/_static/formproc/debug"
+      method="POST">
+      <fieldset>
+        <legend>Choisissez un identifiant</legend>
+        <label>Identifiant (4 à 12 lettres)
+          <input required id="identifiant" type="text"  title="4 à 12 lettres: ab...A...Z" pattern="[a-zA-Z]{4,12}" name="Identifiant"/>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Quel est votre âge ?</legend>
+        <label>Age
+          <input required name="age" id="age" type="number" min="18"/>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Quel est votre code postal ?</legend>
+        <label>Code postal
+          <input required name="CP" id="CP" type="text" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Quel est votre commune ?</legend>
+        <label>Commune
+          <input required name="commune" id="commune" type="text" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Choisissez un mot de passe</legend>
+        <label>Mot de passe (une lettre, un chiffre et longueur ≥ 8)
+          <i class="fa-solid fa-eye"></i>
+          <input required name="mdp1" id="mdp1"  type="password"  pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="au moins 8 caractères avec une minuscule et un chiffre" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Confirmation du mot de passe</legend>
+        <label>Retapez le mot de passe
+          <i class="fa-solid fa-eye"></i>
+          <input required name="mdp2" id="mdp2" type="password" />
+        </label>
+        <p class="help">doit être identique au précédent</p>
+      </fieldset>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+
+</body>
+
+</html>

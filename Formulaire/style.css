@@ -1,0 +1,45 @@
+h1{
+  text-align: center;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+fieldset, label{
+  display: flex;
+  flex-direction: column;
+}
+
+.help{
+  visibility: hidden;
+  margin: 0;
+  display: block;
+  font-weight: bold;
+  color: red;
+}
+
+fieldset.invalid .help{
+  visibility: visible;
+}
+
+fieldset.invalid input {
+  border: 2px solid red;
+}
+
+i{
+  color: lightgrey;
+  position: absolute;
+  bottom: 0.2rem;
+  right:0.5rem;
+}
+
+label{
+  position: relative;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Exercice horloge</title>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      --:--:--
+    </h1>
+    <audio controls>
+      La balise audio n'est pas reconnue.
+    </audio>
+  </header>
+  <main>
+    <!-- le formulaire ci-dessous est caché  -->
+    <section id="newAlarm">
+      <h2>Créer une nouvelle alarme</h2>
+      <form>
+        <label>Heure
+          <input class="time" type="time" required />
+        </label>
+        <label>Titre
+          <input class="name" title="nom de l'alarme" required />
+        </label>
+        <label>Son
+          <select class="sound">
+            <option value="1">sonnette</option>
+            <option value="2">sifflet</option>
+            <option value="3">rhume</option>
+          </select>
+        </label>
+        <button type="reset">Réinitialiser</button>
+        <button type="submit">Créer l'alarme</button>
+      </form>
+    </section>
+    <section id="alarms">
+      <h2>Liste de vos alarmes</h2>
+      <button id="saveAlarms">Sauver les modifications</button>
+
+    </section>
+    
+  </main>
+  <footer>
+    Sons: <a href="https://BigSoundBank.com">BigSoundBank.com</a>
+  </footer>
+</body>
+
+</html>
